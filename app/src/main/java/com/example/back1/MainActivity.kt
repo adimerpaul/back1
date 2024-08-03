@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity() {
             val n2 = binding.num2.text.toString()
             if (n1.isEmpty() || n2.isEmpty()) {
                 binding.result.text = "Please enter two numbers"
+                Toast.makeText(this, "Please enter two numbers", Toast.LENGTH_SHORT).show()
             } else {
                 val sum = n1.toInt() + n2.toInt()
                 binding.result.text = "Result: $sum"
